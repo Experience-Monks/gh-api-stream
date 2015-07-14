@@ -1,0 +1,53 @@
+{
+  "name": "gh-api-stream",
+  "version": "1.0.0",
+  "description": "streams JSON content from a GitHub API",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "JSONStream": "^1.0.4",
+    "got": "^3.3.0",
+    "object-assign": "^3.0.0",
+    "parse-link-header": "^0.2.0",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.5.0",
+    "faucet": "0.0.1",
+    "ghauth": "^3.0.0",
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test/index.js | faucet"
+  },
+  "keywords": [
+    "gh",
+    "stream",
+    "list",
+    "api",
+    "repo",
+    "user",
+    "token",
+    "auth",
+    "issue",
+    "issues",
+    "repositories",
+    "repository",
+    "resp",
+    "json",
+    "data"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/gh-api-stream.git"
+  },
+  "homepage": "https://github.com/Jam3/gh-api-stream",
+  "bugs": {
+    "url": "https://github.com/Jam3/gh-api-stream/issues"
+  }
+}
