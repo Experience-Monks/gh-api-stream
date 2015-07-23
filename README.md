@@ -40,6 +40,7 @@ ghauth({
     query: {
       state: 'open'
     },
+    token: data.token,
     rows: true
   }).on('data', function (issue) {
     console.log(issue.title)
