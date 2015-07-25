@@ -69,7 +69,7 @@ The options:
 - `pages` (Number)
   - if specified, will limit the request to no more than N pages. Otherwise streams until we have no remaining pages
 - `rows` (Boolean|String|Array)
-  - if `true`, parses the JSON in rows, emitting a `'data'` event for each row. If `false`, it will buffer and emit the entire JSON
+  - if `true`, parses the JSON in rows, emitting a `'data'` event for each row. If `false` or undefined, it will buffer and emit the entire JSON
   - Strings and Arrays are passed to [JSONStream](https://github.com/dominictarr/JSONStream) `parse` path, e.g. `'*.user.login'`
   
 Other options are passed to [got](https://www.npmjs.com/package/got), like `query`, `method` and `body`. Requests use `'https://api.github.com/'` as a URL base.

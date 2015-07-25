@@ -73,6 +73,7 @@ function ghStream (url, opt) {
   function streamRows (uri) {
     var response
     request(uri, opt)
+      .on('error', stream.emit.bind(stream, 'error'))
       .once('response', function (res) {
         response = res
       })
