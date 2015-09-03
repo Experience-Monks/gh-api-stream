@@ -3,6 +3,7 @@ var through = require('through2').obj
 var json = require('JSONStream')
 var request = require('got')
 var assign = require('object-assign')
+var ghApiHeaders = require('gh-api-headers')
 
 module.exports = ghApiStream
 module.exports.endpoint = ghStream
@@ -39,20 +40,7 @@ function ghStream (url, opt) {
     return stream
   }
   
-  opt.headers = assign({}, opt.headers, {
-    accept: 'application/vnd.github.v3+json',
-    'user-agent': 'gh-api-stream'
-  })
-  
-  if (opt.token) {
-    opt.headers.authorization = 'token ' + opt.token
-  }
-  
-  // https://developer.github.com/v3/#http-verbs
-  if (/^put$/i.test(opt.method) && !opt.body) {
-    opt['content-length'] = 0
-  }
-  
+  opt.headers = ghApiHeaders(opt)
   opt.json = !rows
   if (rows) {
     streamRows(url)
