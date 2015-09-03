@@ -1,6 +1,6 @@
 {
   "name": "gh-api-stream",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "streams JSON content from a GitHub API",
   "main": "index.js",
   "license": "MIT",
