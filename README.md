@@ -14,7 +14,7 @@ api('/users/mattdesl/followers')
   })
 ```
 
-PRs/suggestions welcome.
+For a non-streamed and browser-friendly alternative, see [gh-api](https://github.com/Jam3/gh-api).
 
 ## Install
 
@@ -82,6 +82,11 @@ You can use this to pass a full URL to your API endpoint. The options are the sa
 var api = require('gh-api-stream')
 var stream = api.url('https://my-fancy-github.com/repositories')
 ```
+
+## See Also
+
+- [gh-api](https://github.com/Jam3/gh-api) - a non-streamed alternative suitable for the browser
+- [gh-got](https://www.npmjs.com/package/gh-got) - a related library built on [got](https://www.npmjs.com/package/got)
 
 ## License
 
